@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Moderne Webseite</title>
+  <link rel="stylesheet" href="StyleSheet.css">
 </head>
 <body>
-$END$
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">E1 Series</a>
+
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html" class="btn-simple">Home</a>
+      <a href="about.html" class="btn-simple">Über uns</a>
+      <a href="services.html" class="btn-minimal">Services</a>
+      <a href="contact.html" class="btn-minimal active">Kontakt</a>
+      <a href="login.html" class="btn-secondary">Anmelden</a>
+      <a href="register.html" class="btn-primary">Registrieren</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <h1>Kontakt</h1>
+  <p>Nimm gerne Kontakt mit uns auf! Hier kannst du später ein Kontaktformular oder deine Kontaktdaten hinzufügen.</p>
+
+  <!-- Hier kannst du später ein Kontaktformular erweitern -->
+  <div style="margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+      <h2 style="margin-bottom: 1.5rem;">Kontaktinformationen</h2>
+      <div style="text-align: left; line-height: 2;">
+        <p><strong>E-Mail:</strong> info@meinewebseite.de</p>
+        <p><strong>Telefon:</strong> +49 123 456 789</p>
+        <p><strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <h3 style="margin-bottom: 1rem;">Kontaktformular</h3>
+        <p style="opacity: 0.8;">Hier kannst du später ein funktionierendes Kontaktformular einbauen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // Smooth animations on scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+    } else {
+      navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    }
+  });
+</script>
 </body>
 </html>

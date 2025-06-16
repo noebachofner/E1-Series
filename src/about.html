@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns - Moderne Webseite</title>
+  <link rel="stylesheet" href="StyleSheet.css">
 </head>
 <body>
-$END$
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">E1 Series</a>
+
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html" class="btn-simple">Home</a>
+      <a href="about.html" class="btn-simple active">Über uns</a>
+      <a href="services.html" class="btn-minimal">Services</a>
+      <a href="contact.html" class="btn-minimal">Kontakt</a>
+      <a href="login.html" class="btn-secondary">Anmelden</a>
+      <a href="register.html" class="btn-primary">Registrieren</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <h1>Über uns</h1>
+  <p>Hier kannst du Informationen über dein Unternehmen oder dich selbst hinzufügen. Diese Seite ist bereit für deine Inhalte!</p>
+
+  <!-- Hier kannst du später deine Inhalte erweitern -->
+  <div style="margin-top: 2rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <h2 style="margin-bottom: 1rem;">Platz für deine Inhalte</h2>
+    <p>Füge hier deine Texte, Bilder oder andere Elemente hinzu.</p>
+  </div>
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // Smooth animations on scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+    } else {
+      navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    }
+  });
+</script>
 </body>
 </html>

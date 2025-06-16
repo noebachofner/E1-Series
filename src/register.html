@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrieren - Moderne Webseite</title>
+  <link rel="stylesheet" href="StyleSheet.css">
 </head>
 <body>
-$END$
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">E1 Series</a>
+
+    <div class="nav-menu" id="navMenu">
+      <a href="index.html" class="btn-simple">Home</a>
+      <a href="about.html" class="btn-simple">Über uns</a>
+      <a href="services.html" class="btn-minimal">Services</a>
+      <a href="contact.html" class="btn-minimal">Kontakt</a>
+      <a href="login.html" class="btn-secondary">Anmelden</a>
+      <a href="register.html" class="btn-primary active">Registrieren</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <h1>Registrieren</h1>
+  <p>Erstelle dein neues Konto. Hier kannst du später ein funktionierendes Registrierungssystem implementieren.</p>
+
+  <!-- Hier kannst du später das Registrierungssystem erweitern -->
+  <div style="margin-top: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+    <div style="padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+      <form style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="text" placeholder="Vorname" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
+        <input type="text" placeholder="Nachname" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
+        <input type="email" placeholder="E-Mail Adresse" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
+        <input type="password" placeholder="Passwort" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
+        <input type="password" placeholder="Passwort bestätigen" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
+        <button type="submit" class="btn-primary" style="margin-top: 1rem;">Registrieren</button>
+      </form>
+
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <p style="opacity: 0.8;">Bereits ein Konto?</p>
+        <a href="login.html" style="color: white; text-decoration: underline;">Jetzt anmelden</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // Smooth animations on scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+    } else {
+      navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    }
+  });
+</script>
 </body>
 </html>
