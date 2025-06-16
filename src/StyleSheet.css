@@ -10,7 +10,6 @@ body {
     min-height: 100vh;
 }
 
-/* Navigationsleiste */
 .navbar {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -33,7 +32,6 @@ body {
     height: 70px;
 }
 
-/* Logo/Website Name */
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -49,14 +47,12 @@ body {
     transform: scale(1.05);
 }
 
-/* Navigation Menu */
 .nav-menu {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-/* Stylische Buttons */
 .btn-primary {
     background: linear-gradient(45deg, #667eea, #764ba2);
     color: white;
@@ -95,7 +91,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Einfache schlichte Buttons */
 .btn-simple {
     background: none;
     border: none;
@@ -140,7 +135,6 @@ body {
     font-weight: 600;
 }
 
-/* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -156,7 +150,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Content Area */
 .content {
     margin-top: 70px;
     padding: 4rem 2rem;
@@ -177,7 +170,6 @@ body {
     margin: 0 auto;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         padding: 0 1rem;
@@ -221,7 +213,6 @@ body {
     }
 }
 
-/* Animationen */
 @keyframes fadeInUp {
     from {
         opacity: 0;
