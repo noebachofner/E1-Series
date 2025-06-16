@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne Webseite</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">MeineWebseite</a>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html" class="btn-simple">Home</a>
+            <a href="about.html" class="btn-simple">Über uns</a>
+            <a href="services.html" class="btn-minimal">Services</a>
+            <a href="contact.html" class="btn-minimal">Kontakt</a>
+            <a href="login.html" class="btn-secondary">Anmelden</a>
+            <a href="register.html" class="btn-primary">Registrieren</a>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<div class="content">
+    <h1>Willkommen auf meiner Webseite</h1>
+    <p>Hier wird später der Hauptinhalt der Webseite stehen. Die Navigation oben zeigt verschiedene Button-Stile, die du in deinem Projekt verwenden kannst.</p>
+</div>
+
+<script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Smooth animations on scroll
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        }
+    });
+</script>
+</body>
+</html>
