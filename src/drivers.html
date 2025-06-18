@@ -4,155 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drivers - E1 Series</title>
-  <link rel="stylesheet" href="StyleSheet.css">
-  <style>
-    .driver-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .driver-item {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      margin-bottom: 4rem;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .driver-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .driver-item.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .driver-image {
-      flex: 0 0 300px;
-      height: 250px;
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 600;
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .driver-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
-    }
-
-    .driver-content {
-      flex: 1;
-      color: white;
-    }
-
-    .driver-content h3 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(45deg, #fff, #f0f0f0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .driver-team {
-      font-size: 1rem;
-      color: #667eea;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .driver-content p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      opacity: 0.9;
-      margin-bottom: 1.5rem;
-    }
-
-    .driver-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-
-    .stat {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 10px;
-    }
-
-    .stat-number {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #fff;
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      opacity: 0.7;
-      margin-top: 0.2rem;
-    }
-
-    .driver-flag {
-      display: inline-block;
-      width: 30px;
-      height: 20px;
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      border-radius: 3px;
-      margin-left: 0.5rem;
-      vertical-align: middle;
-    }
-
-    @media (max-width: 768px) {
-      .driver-item,
-      .driver-item.reverse {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-      }
-
-      .driver-image {
-        flex: none;
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .driver-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="menuStyle.css">
+  <link rel="stylesheet" href="driversStyle.css">
 </head>
 <body>
 <nav class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="logo">E1 Series</a>
+    <a href="start.html" class="logo">E1 Series</a>
 
     <div class="nav-menu" id="navMenu">
-      <a href="index.html" class="btn-simple">Home</a>
+      <a href="start.html" class="btn-simple">Home</a>
       <a href="about.html" class="btn-simple">Über E1 Series</a>
-      <a href="contact.html" class="btn-minimal">Kontakt</a>
+      <a href="leaderboard.html" class="btn-minimal">Kontakt</a>
       <a href="teams.html" class="btn-secondary">Teams</a>
       <a href="drivers.html" class="btn-primary active">Drivers</a>
     </div>
@@ -167,18 +30,17 @@
 
 <div class="content">
   <h1>E1 Series Drivers</h1>
-  <p>Lerne die talentierten Fahrer der E1 Series kennen, die mit ihren elektrischen Rennwagen Geschichte schreiben.</p>
+  <p>Lerne die Fahrer, auch Piloten genannt der E1 Series kennen!</p>
 
   <div class="driver-section">
-    <!-- Driver 1 -->
     <div class="driver-item">
       <div class="driver-image">
-        Fahrer Foto 1
+        <img src="resources/dani_clos.jpg" alt="Dani Clos">
       </div>
       <div class="driver-content">
-        <h3>Max Elektronik <span class="driver-flag"></span></h3>
-        <div class="driver-team">Thunder Volt Racing</div>
-        <p>Der deutsche Pilot ist bekannt für seine präzise Fahrweise und sein technisches Verständnis. Mit 28 Jahren gehört er zu den erfahrensten Fahrern der E1 Series und hat bereits mehrere Siege auf seinem Konto. Seine Spezialität sind Regenrennen.</p>
+        <h3>Dani Clos <img src="resources/spanish_flag.png" class="driver-flag" alt="Spanische Flagge"></h3>
+        <div class="driver-team">Aoki Racing Team</div>
+        <p>Seine Beschreibung</p>
         <div class="driver-stats">
           <div class="stat">
             <span class="stat-number">5</span>
