@@ -5,6 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drivers - E1 Series</title>
   <link rel="stylesheet" href="StyleSheet.css">
+  <style>
+    .driver-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .driver-item {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .driver-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .driver-item.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .driver-image {
+      flex: 0 0 300px;
+      height: 250px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .driver-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    }
+
+    .driver-content {
+      flex: 1;
+      color: white;
+    }
+
+    .driver-content h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(45deg, #fff, #f0f0f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .driver-team {
+      font-size: 1rem;
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .driver-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .driver-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .stat {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .stat-number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.2rem;
+    }
+
+    .driver-flag {
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      border-radius: 3px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      .driver-item,
+      .driver-item.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .driver-image {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .driver-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
 <nav class="navbar">
@@ -14,7 +152,6 @@
     <div class="nav-menu" id="navMenu">
       <a href="index.html" class="btn-simple">Home</a>
       <a href="about.html" class="btn-simple">Über E1 Series</a>
-      <a href="services.html" class="btn-minimal">Services</a>
       <a href="contact.html" class="btn-minimal">Kontakt</a>
       <a href="teams.html" class="btn-secondary">Teams</a>
       <a href="drivers.html" class="btn-primary active">Drivers</a>
@@ -29,24 +166,187 @@
 </nav>
 
 <div class="content">
-  <h1>Registrieren</h1>
-  <p>Erstelle dein neues Konto. Hier kannst du später ein funktionierendes Registrierungssystem implementieren.</p>
+  <h1>E1 Series Drivers</h1>
+  <p>Lerne die talentierten Fahrer der E1 Series kennen, die mit ihren elektrischen Rennwagen Geschichte schreiben.</p>
 
-  <!-- Hier kannst du später das Registrierungssystem erweitern -->
-  <div style="margin-top: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
-    <div style="padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
-      <form style="display: flex; flex-direction: column; gap: 1rem;">
-        <input type="text" placeholder="Vorname" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
-        <input type="text" placeholder="Nachname" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
-        <input type="email" placeholder="E-Mail Adresse" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
-        <input type="password" placeholder="Passwort" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
-        <input type="password" placeholder="Passwort bestätigen" style="padding: 12px; border: none; border-radius: 8px; font-size: 1rem;">
-        <button type="submit" class="btn-primary" style="margin-top: 1rem;">Registrieren</button>
-      </form>
+  <div class="driver-section">
+    <!-- Driver 1 -->
+    <div class="driver-item">
+      <div class="driver-image">
+        Fahrer Foto 1
+      </div>
+      <div class="driver-content">
+        <h3>Max Elektronik <span class="driver-flag"></span></h3>
+        <div class="driver-team">Thunder Volt Racing</div>
+        <p>Der deutsche Pilot ist bekannt für seine präzise Fahrweise und sein technisches Verständnis. Mit 28 Jahren gehört er zu den erfahrensten Fahrern der E1 Series und hat bereits mehrere Siege auf seinem Konto. Seine Spezialität sind Regenrennen.</p>
+        <div class="driver-stats">
+          <div class="stat">
+            <span class="stat-number">5</span>
+            <div class="stat-label">Siege</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">12</span>
+            <div class="stat-label">Podiums</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">850</span>
+            <div class="stat-label">Punkte</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <div class="stat-label">Saisons</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div style="text-align: center; margin-top: 1.5rem;">
-        <p style="opacity: 0.8;">Bereits ein Konto?</p>
-        <a href="teams.html" style="color: white; text-decoration: underline;">Jetzt anmelden</a>
+    <!-- Driver 2 -->
+    <div class="driver-item reverse">
+      <div class="driver-image">
+        Fahrer Foto 2
+      </div>
+      <div class="driver-content">
+        <h3>Sarah Lightning <span class="driver-flag"></span></h3>
+        <div class="driver-team">Electric Storm Motorsport</div>
+        <p>Die britische Rennfahrerin bringt frischen Wind in die E1 Series. Bekannt für ihre aggressive Überholmanöver und ihr taktisches Geschick, hat sie sich schnell zu einer der Top-Fahrerinnen entwickelt. Ihre Expertise in der Batterieoptimierung ist legendär.</p>
+        <div class="driver-stats">
+          <div class="stat">
+            <span class="stat-number">8</span>
+            <div class="stat-label">Siege</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">18</span>
+            <div class="stat-label">Podiums</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1200</span>
+            <div class="stat-label">Punkte</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">4</span>
+            <div class="stat-label">Saisons</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Driver 3 -->
+    <div class="driver-item">
+      <div class="driver-image">
+        Fahrer Foto 3
+      </div>
+      <div class="driver-content">
+        <h3>Jake Velocity <span class="driver-flag"></span></h3>
+        <div class="driver-team">Velocity E-Motion</div>
+        <p>Der junge Amerikaner ist das Talent der E1 Series. Mit nur 24 Jahren hat er bereits die Rennwelt aufgemischt. Seine unkonventionellen Strategien und sein Mut zu riskanten Manövern machen ihn zu einem der spannendsten Fahrer der Serie.</p>
+        <div class="driver-stats">
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <div class="stat-label">Siege</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">9</span>
+            <div class="stat-label">Podiums</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">420</span>
+            <div class="stat-label">Punkte</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2</span>
+            <div class="stat-label">Saisons</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Driver 4 -->
+    <div class="driver-item reverse">
+      <div class="driver-image">
+        Fahrer Foto 4
+      </div>
+      <div class="driver-content">
+        <h3>Erik Nordström <span class="driver-flag"></span></h3>
+        <div class="driver-team">Nordic Lightning Racing</div>
+        <p>Der schwedische Veteran bringt 15 Jahre Motorsport-Erfahrung in die E1 Series. Seine ruhige Art und strategische Herangehensweise machen ihn zu einem gefürchteten Konkurrenten. Besonders bei schwierigen Wetterbedingungen zeigt er sein wahres Können.</p>
+        <div class="driver-stats">
+          <div class="stat">
+            <span class="stat-number">6</span>
+            <div class="stat-label">Siege</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15</span>
+            <div class="stat-label">Podiums</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">950</span>
+            <div class="stat-label">Punkte</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <div class="stat-label">Saisons</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Driver 5 -->
+    <div class="driver-item">
+      <div class="driver-image">
+        Fahrer Foto 5
+      </div>
+      <div class="driver-content">
+        <h3>Marco Solare <span class="driver-flag"></span></h3>
+        <div class="driver-team">Solar Phoenix Team</div>
+        <p>Der italienische Fahrer verkörpert die Leidenschaft des Motorsports. Mit seinem technischen Hintergrund als Ingenieur versteht er seine Maschine wie kein anderer. Seine Fähigkeit, das Maximum aus dem Fahrzeug herauszuholen, ist beeindruckend.</p>
+        <div class="driver-stats">
+          <div class="stat">
+            <span class="stat-number">4</span>
+            <div class="stat-label">Siege</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">11</span>
+            <div class="stat-label">Podiums</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">680</span>
+            <div class="stat-label">Punkte</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2</span>
+            <div class="stat-label">Saisons</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Driver 6 -->
+    <div class="driver-item reverse">
+      <div class="driver-image">
+        Fahrer Foto 6
+      </div>
+      <div class="driver-content">
+        <h3>Luna Elektra <span class="driver-flag"></span></h3>
+        <div class="driver-team">Thunder Volt Racing</div>
+        <p>Die französische Pilotin ist eine der wenigen Frauen in der E1 Series und macht ihrem Namen alle Ehre. Ihre elektrisierenden Auftritte und ihre Fähigkeit, unter Druck zu performen, haben ihr schnell eine große Fanbase eingebracht.</p>
+        <div class="driver-stats">
+          <div class="stat">
+            <span class="stat-number">2</span>
+            <div class="stat-label">Siege</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">7</span>
+            <div class="stat-label">Podiums</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">320</span>
+            <div class="stat-label">Punkte</div>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1</span>
+            <div class="stat-label">Saisons</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -70,6 +370,28 @@
     } else {
       navbar.style.background = 'rgba(255, 255, 255, 0.95)';
     }
+  });
+
+  // Animation on scroll for driver items
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.driver-item').forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = 'all 0.6s ease';
+    observer.observe(item);
   });
 </script>
 </body>
