@@ -15,9 +15,9 @@
     <div class="nav-menu" id="navMenu">
       <a href="index.html" class="btn-simple">Home</a>
       <a href="about.html" class="btn-simple active">Über E1 Series</a>
-      <a href="leaderboard.html" class="btn-minimal">Kontakt</a>
-      <a href="teams.html" class="btn-secondary">Teams</a>
-      <a href="drivers.html" class="btn-primary">Drivers</a>
+      <a href="leaderboard.html" class="btn-simple">Ranglisten</a>
+      <a href="teams.html" class="btn-simple">Teams</a>
+      <a href="drivers.html" class="btn-simple">Drivers</a>
     </div>
 
     <div class="menu-toggle" id="menuToggle">
@@ -29,12 +29,68 @@
 </nav>
 
 <div class="content">
-  <h1>Über uns</h1>
-  <p>Hier kannst du Informationen über dein Unternehmen oder dich selbst hinzufügen. Diese Seite ist bereit für deine Inhalte!</p>
+  <h1>Über E1 Series</h1>
+  <p>Willkommen bei der E1 Series - der zukunftsweisenden elektrischen Rennserie, die Nachhaltigkeit und Hochleistungsmotorsport miteinander verbindet.</p>
 
   <div style="margin-top: 2rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; max-width: 800px; margin-left: auto; margin-right: auto;">
-    <h2 style="margin-bottom: 1rem;">Platz für deine Inhalte</h2>
-    <p>Füge hier deine Texte, Bilder oder andere Elemente hinzu.</p>
+    <h2 style="margin-bottom: 1rem;">Die Revolution des Motorsports</h2>
+    <p>Die E1 Series steht für Innovation, Nachhaltigkeit und pure Adrenalin. Seit der Gründung haben wir den Motorsport revolutioniert und zeigen, dass elektrische Rennwagen die Zukunft des Sports sind.</p>
+  </div>
+
+  <div class="timeline-section">
+    <h2 class="timeline-title">Unsere Geschichte</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2019</div>
+        <div class="timeline-content">
+          <h3>Die Idee wird geboren</h3>
+          <p>Die Vision einer vollständig elektrischen Rennserie entsteht. Erste Konzepte für nachhaltige Hochleistungs-Rennwagen werden entwickelt und die Grundlagen für eine neue Ära des Motorsports gelegt.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-content">
+          <h3>Erste Prototypen</h3>
+          <p>Entwicklung und Test der ersten E1-Prototypen. Revolutionäre Batterietechnologie und aerodynamische Innovationen werden implementiert. Die ersten Testfahrten übertreffen alle Erwartungen.</p>
+        </div>
+      </div>
+      <div class="timeline-divider">
+        <img src="dein-bild.jpg" alt="Zwischenbild" class="timeline-divider-image">
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-content">
+          <h3>Teams schließen sich an</h3>
+          <p>Renommierte Teams aus aller Welt erkennen das Potenzial der E1 Series. Thunder Volt Racing, Electric Storm Motorsport und weitere Pioniere werden zu den Gründungsmitgliedern der Serie.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <h3>Erste Saison startet</h3>
+          <p>Der historische erste Rennstart der E1 Series! Mit 8 Teams und 16 Fahrern beginnt eine neue Ära des Motorsports. Die Zuschauer sind begeistert von der Geschwindigkeit und Innovation.</p>
+        </div>
+      </div>
+      <div class="timeline-divider">
+        <img src="dein-bild.jpg" alt="Zwischenbild" class="timeline-divider-image">
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>Internationale Expansion</h3>
+          <p>Die E1 Series expandiert weltweit mit Rennen in Europa, Amerika und Asien. Neue Strecken, mehr Teams und wachsende Fangemeinschaften machen die Serie zum globalen Phänomen.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <h3>Technologische Durchbrüche</h3>
+          <p>Bahnbrechende Innovationen in der Energieeffizienz und Leistung. Die E1-Rennwagen erreichen neue Geschwindigkeitsrekorde und setzen Standards für die gesamte Automobilindustrie.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -54,6 +110,25 @@
     } else {
       navbar.style.background = 'rgba(255, 255, 255, 0.95)';
     }
+  });
+
+  const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('animate');
+        }, index * 200);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
   });
 </script>
 </body>
