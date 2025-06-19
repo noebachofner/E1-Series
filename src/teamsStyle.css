@@ -1,71 +1,116 @@
+:root {
+    --glass: rgba(255, 255, 255, 0.1);
+    --border: 1px solid rgba(255, 255, 255, 0.1);
+    --border-radius: 15px;
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --gradient: linear-gradient(45deg, rgba(0, 183, 255, 0.7), rgba(255, 48, 255, 0.7));
+    --text: rgba(255, 255, 255, 0.95);
+    --accent: #00b7ff;
+}
 
 .team-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
 .team-item {
     display: flex;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 4rem;
-    background: rgba(255, 255, 255, 0.1);
+    gap: 2rem;
+    background: var(--glass);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border: var(--border);
+    border-radius: var(--border-radius);
     padding: 2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.team-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.team-item.reverse {
+.team-item:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.team-image {
-    flex: 0 0 300px;
-    height: 200px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    border-radius: 15px;
+.team-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px 250px;
+    gap: 1rem;
+    min-width: 400px;
+    height: 510px;
+}
+
+.team-photos .placeholder:first-child {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.team-photos .placeholder:nth-child(2),
+.team-photos .placeholder:nth-child(3) {
+    height: 250px;
+    z-index: 1;
+}
+
+.team-photos .placeholder {
+    background: var(--gradient);
+    border-radius: var(--border-radius);
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.2rem;
+    color: var(--text);
     font-weight: 600;
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.placeholder::after {
+    content: attr(data-size);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    opacity: 0.8;
 }
 
 .team-content {
     flex: 1;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
 }
 
 .team-content h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #fff, #f0f0f0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 1.8rem;
+    color: var(--text);
 }
 
 .team-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    opacity: 0.8;
 }
 
 .team-stats {
     display: flex;
     gap: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+}
+
+.team-item:nth-child(odd) .team-stats {
+    justify-content: flex-end;
+}
+
+.team-item:nth-child(even) .team-stats {
+    justify-content: flex-start;
 }
 
 .stat {
@@ -73,31 +118,43 @@
 }
 
 .stat-number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
 }
 
 .stat-label {
     font-size: 0.9rem;
-    opacity: 0.7;
+    color: var(--text);
+    opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .team-item,
-    .team-item.reverse {
+    .team-item:nth-child(even) {
         flex-direction: column;
-        text-align: center;
-        gap: 2rem;
     }
 
-    .team-image {
-        flex: none;
+    .team-photos {
+        min-width: unset;
         width: 100%;
-        max-width: 300px;
+        height: 550px;
     }
 
-    .team-stats {
+    .team-item:nth-child(odd) .team-stats,
+    .team-item:nth-child(even) .team-stats {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-photos {
+        height: 400px;
+        grid-template-rows: 180px 180px;
+    }
+
+    .team-photos .placeholder:nth-child(2),
+    .team-photos .placeholder:nth-child(3) {
+        height: 180px;
     }
 }

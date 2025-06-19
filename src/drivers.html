@@ -116,22 +116,27 @@
       </div>
     </div>
 
-    <!-- Driver 4 -->
     <div class="driver-item reverse">
       <div class="driver-image">
-        Fahrer Foto 4
+        <img src="resources/rusty_Wyats.jpg" alt="Rusty Wyatt">
       </div>
       <div class="driver-content">
-        <h3>Erik Nordström <span class="driver-flag"></span></h3>
-        <div class="driver-team">Nordic Lightning Racing</div>
-        <p>Der schwedische Veteran bringt 15 Jahre Motorsport-Erfahrung in die E1 Series. Seine ruhige Art und strategische Herangehensweise machen ihn zu einem gefürchteten Konkurrenten. Besonders bei schwierigen Wetterbedingungen zeigt er sein wahres Können.</p>
+        <h3>Rusty Wyatt <img src="resources/kanadische_flagge.jpg" class="driver-flag" alt="Kanadische Flagge"> </h3>
+        <div class="driver-team">Team AIUla championed by LeBron James</div>
+        <p>Mit einer Mischung aus roher Geschwindigkeit und unkonventionellem Fahrstil bringt Rusty Wyatt eine erfrischende Unvorhersehbarkeit in die Rennstrecke.
+          Sein Markenzeichen? Eine "go hard or go home"-Mentalität, die jedes Rennen in ein aufregendes Spektakel verwandelt –
+          wo andere berechnen, greift Wyatt einfach an. Doch hinter der rebellischen Fassade steckt ein scharfes Renngespür.
+          Seine improvisationsfähige Fahrweise und die Fähigkeit, aus scheinbar aussichtslosen Situationen Siege herauszuholen,
+          machen ihn zum Fanliebling. Wyatt beweist: Manchmal schlägt Instinkt jede Datenanalyse.
+          Die E1 Series gewinnt mit ihm nicht nur einen rasanten Unterhalter, sondern den lebenden Beweis,
+          dass im Motorsport noch Platz für echte Draufgänger ist.</p>
         <div class="driver-stats">
           <div class="stat">
-            <span class="stat-number">3</span>
+            <span class="stat-number">0</span>
             <div class="stat-label">Siege</div>
           </div>
           <div class="stat">
-            <span class="stat-number">109</span>
+            <span class="stat-number">45</span>
             <div class="stat-label">Punkte</div>
           </div>
         </div>
@@ -148,20 +153,12 @@
         <p>Der italienische Fahrer verkörpert die Leidenschaft des Motorsports. Mit seinem technischen Hintergrund als Ingenieur versteht er seine Maschine wie kein anderer. Seine Fähigkeit, das Maximum aus dem Fahrzeug herauszuholen, ist beeindruckend.</p>
         <div class="driver-stats">
           <div class="stat">
-            <span class="stat-number">4</span>
+            <span class="stat-number">0</span>
             <div class="stat-label">Siege</div>
           </div>
           <div class="stat">
-            <span class="stat-number">11</span>
-            <div class="stat-label">Podiums</div>
-          </div>
-          <div class="stat">
-            <span class="stat-number">680</span>
+            <span class="stat-number">45</span>
             <div class="stat-label">Punkte</div>
-          </div>
-          <div class="stat">
-            <span class="stat-number">2</span>
-            <div class="stat-label">Saisons</div>
           </div>
         </div>
       </div>
@@ -198,48 +195,5 @@
     </div>
   </div>
 </div>
-
-<script>
-  // Mobile Menu Toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-  });
-
-  // Smooth animations on scroll
-  window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-    } else {
-      navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-    }
-  });
-
-  // Animation on scroll for driver items
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.driver-item').forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(30px)';
-    item.style.transition = 'all 0.6s ease';
-    observer.observe(item);
-  });
-</script>
 </body>
 </html>
