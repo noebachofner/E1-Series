@@ -55,4 +55,16 @@ if (document.querySelector('.team-item')) {
     item.style.transition = 'all 0.6s ease';
     observer.observe(item);
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    // Menü Toggle Funktionalität
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+    }
+  });
 }
