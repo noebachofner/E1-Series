@@ -1,4 +1,3 @@
-
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -20,7 +19,6 @@ if (navbar) {
   });
 }
 
-
 if (document.querySelector('.timeline-item')) {
   const observerOptions = {
     threshold: 0.3,
@@ -41,7 +39,6 @@ if (document.querySelector('.timeline-item')) {
     observer.observe(item);
   });
 }
-
 
 if (document.querySelector('.team-item')) {
   const observerOptions = {
