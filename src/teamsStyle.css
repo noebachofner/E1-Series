@@ -68,15 +68,6 @@
     position: relative;
 }
 
-.placeholder::after {
-    content: attr(data-size);
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 0.8rem;
-    opacity: 0.8;
-}
-
 .team-content {
     flex: 1;
     display: flex;
