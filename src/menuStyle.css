@@ -162,6 +162,20 @@ body {
     pointer-events: none;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+.copyright-text.right {
+    left: auto;
+    right: 20px;
+}
+
+.copyright-text a {
+    color: var(--accent);
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.copyright-text a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 768px) {
     .navbar {
