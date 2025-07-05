@@ -3,7 +3,6 @@
     --border: 1px solid rgba(255, 255, 255, 0.1);
     --border-radius: 15px;
     --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    --gradient: linear-gradient(45deg, rgba(0, 183, 255, 0.7), rgba(255, 48, 255, 0.7));
     --text: rgba(255, 255, 255, 0.95);
     --accent: #00b7ff;
 }
@@ -54,18 +53,6 @@
     height: 220px;
 }
 
-.placeholder {
-    background: var(--gradient);
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text);
-    font-weight: 600;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-}
 
 .placeholder img {
     width: 100%;
@@ -143,13 +130,7 @@
         grid-template-rows: 180px 120px;
     }
 
-    .team-photos .large-photo {
-        height: 180px;
-    }
 
-    .team-photos .small-photo {
-        height: 120px;
-    }
 
     .team-item:nth-child(odd) .team-stats,
     .team-item:nth-child(even) .team-stats {
@@ -167,9 +148,6 @@
         height: 160px;
     }
 
-    .team-photos .small-photo {
-        height: 200px;
-    }
 
     .team-item {
         padding: 1.5rem;
