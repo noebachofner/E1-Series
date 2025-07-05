@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- Style sheets and conditional switches to detect IE versions. Modernizr.js compatible. -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"/> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"/> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"/> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <!-- iOS web app capabilities -->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Disable scale mode in mobile devices. -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!-- Avoid IE to run compatibility. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <meta name="theme-color" content="#1A1A1A">
+                    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '449061387892940');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=449061387892940&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-15243208"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16854933021');
+  gtag('config', 'DC-15243208');
+
+</script>
+
+<!-- Event snippet for Page View conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-16854933021/HZf3CP3ay5saEJ28h-U-'});
+</script>
+<!-- Event snippet for Register conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16854933021/QNi4CIDby5saEJ28h-U-',
+      'event_callback': callback
+  });
+  return false;
+}
+
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://url.uk.m.mimecastprotect.com/s/T2MHCqVZ6f1J85LuZwUzTEMKsx?domain=googletagmanager.com"></script>
+
+<!--
+Event snippet for 2025_E1_Get-Tickets_Register-Now on : Please do not remove.
+Place this snippet on pages with events you’re tracking. 
+Creation date: 02/10/2025
+-->
+
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=15243208;type=e1_200;cat=2025_00;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->
+
+
+<!-- End of event snippet: Please do not remove -->
+<!--
+Event snippet for 2025_E1_Newsletter_Send-Now on : Please do not remove.
+Place this snippet on pages with events you’re tracking. 
+Creation date: 02/10/2025
+-->
+
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=15243208;type=e1_200;cat=2025_000;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- End of event snippet: Please do not remove -->    <!-- Style sheets -->
+    <link rel="stylesheet" href="https://www.e1series.com/assets/css/style.css"/>
+        <!-- Icons -->
+    <link rel="icon" href="https://www.e1series.com/assets/img/apple-touch-icon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://www.e1series.com/assets/img/apple-touch-icon.ico" type="image/x-icon" />
+    <!-- iOS generic -->
+    <link rel="apple-touch-icon" href="https://www.e1series.com/assets/img/ios-icon-iphone.png" />
+    <!-- iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.e1series.com/assets/img/ios-icon-ipad.png" />
+    <!-- iOS Retina -->
+    <link rel="apple-touch-icon" href="https://www.e1series.com/assets/img/ios-icon-retina.png" media="screen and (-webkit-min-device-pixel-ratio: 2)" />
+    <!-- Startup image -->
+    <link rel="apple-touch-startup-image" href="https://www.e1series.com/assets/img/startup.png">
+    <!-- scripts exception -->
+    <script>
+        (function(document,navigator,standalone) {
+            // prevents links from apps from oppening in mobile safari
+            // this javascript must be the first script in your head
+            if ((standalone in navigator) && navigator[standalone]) {
+                var curnode, location=document.location, stop=/^(a|html)$/i;
+                document.addEventListener('click', function(e) {
+                    curnode=e.target;
+                    while (!(stop).test(curnode.nodeName)) {
+                        curnode=curnode.parentNode;
+                    }
+                    // Condidions to do this only on links to your own app
+                    // if you want all links, use if('href' in curnode) instead.
+                    if('href' in curnode && ( curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host) ) ) {
+                        e.preventDefault();
+                        location.href = curnode.href;
+                    }
+                },false);
+            }
+        })(document,window.navigator,'standalone');
+    </script>
+
+    <script src="https://www.e1series.com/assets/js/libs/modernizr.custom.22061.js"></script>
+
+    <title>Team AlUla championed by LeBron James - Teams &amp; Pilots - E1 Series</title>        <meta property="fb:app_id" content="230469274563575" />
+<meta name="Generator" content="" />
+<meta name="Origen" content="" />
+<meta name="Language" content="en" />
+<meta name="Lang" content="en" />
+<meta property="og:url" content="https://www.e1series.com/teams-pilots/team-alula" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="E1 Series" />
+<meta property="og:type" content="article" />
+<meta name="image" content="https://e1series.com/images/m4632_crop11013_1000x1000_proportional_1737625551D980.jpg" />
+<meta property="og:image" content="https://e1series.com/images/m4632_crop11013_1000x1000_proportional_1737625551D980.jpg" />
+<meta name="description" content="Team AlUla championed by LeBron James" />
+<meta property="og:description" content="Team AlUla championed by LeBron James" />
+<meta name="title" content="Team AlUla championed by LeBron James" />
+<meta property="og:title" content="Team AlUla championed by LeBron James" />            
+<script>
+    hideViews   = true;
+    firstImages = true;
+</script>
+        </head>
+<body class="team" ng-app="App" id="ng-app" ng-controller="MainController">
+<div id="container" role="document">
+    <header id="header" class="clearfix ng-cloak" role="banner" ng-controller="HeaderController" ng-init="init('/web-menu.json')" ng-cloack>
+    <a href="#main" class="visuallyhidden" tabindex="1">Skip to content</a>
+    
+    <!-- Burger toggler -->
+    <div id="navigation-toggle" class="toggle-menu icon-menu"><span>menu</span></div>
+    
+    <div id="header-zone7" class="header-footer-zone" ng-if="widgetsZones.header[7]">
+        <div ng-repeat="item in widgetsZones.header[7]"  ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            <div dynamic="item"></div>
+        </div>
+    </div>
+    <div class="wrapper-group">
+    <div class="wrapper row1" ng-if="widgetsZones.header[1] || widgetsZones.header[2] || widgetsZones.header[3]">
+        <div id="header-zone1" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.header[1]}">
+	        
+            <div ng-repeat="item in widgetsZones.header[1]" dynamic="item" ng-if="widgetsZones.header[1]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            </div>
+        </div>
+        <div id="header-zone2" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.header[2]}">
+             <div ng-repeat="item in widgetsZones.header[2]" dynamic="item" ng-if="widgetsZones.header[2]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+             </div>
+            
+        </div>
+        <div id="header-zone3" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.header[3]}">
+            <div ng-repeat="item in widgetsZones.header[3]" dynamic="item" ng-if="widgetsZones.header[3]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper row2" ng-if="widgetsZones.header[4] || widgetsZones.header[5] || widgetsZones.header[6]">
+	    <div id="header-zone4" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.header[4]}">
+            <div ng-repeat="item in widgetsZones.header[4]" dynamic="item" ng-if="widgetsZones.header[4]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            </div>
+	    </div>
+	    <div id="header-zone5" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.header[5]}">
+            <div ng-repeat="item in widgetsZones.header[5]" dynamic="item" ng-if="widgetsZones.header[5]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            </div>
+	    </div>
+	    <div id="header-zone6" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.header[6]}">
+            <div ng-repeat="item in widgetsZones.header[6]" dynamic="item" ng-if="widgetsZones.header[6]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            </div>
+	    </div>
+    </div>
+    </div>
+    <div id="header-zone8" class="header-footer-zone" ng-if="widgetsZones.header[8]">
+        <div ng-repeat="item in widgetsZones.header[8]"  ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            <div dynamic="item"></div>
+        </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    
+    <!-- Navigation -->
+    <nav id="navigation-mobile" class="menu burger-nav navigation clearfix" role="navigation">
+        <div id="menu-zone1" class="menu-zone" ng-if="widgetsZones.menu[1]">
+            <div ng-repeat="item in widgetsZones.menu[1]"  ng-repeat-end-watch="menuWidgetsLoaded" class="menu-widgets-json" ng-cloak>
+                <div dynamic="item"></div>
+            </div>
+        </div>
+        <ul class="menu">
+	        <li ng-if="headerData.siteLangs.length > 0" id="languages">
+	            <a ng-class="headerData.currentLang.class" href="#" ng-bind-html="headerData.currentLang.name" analytics-on analytics-event="lang-item" analytics-category="menu" analytics-label="{{headerData.currentLang.name}}"></a>
+	            <a ng-class="item.class" ng-repeat="item in headerData.siteLangs" ng-repeat-end-watch="menuLoaded" ng-cloak href="{{item.url}}" ng-bind-html="item.name" analytics-on analytics-event="lang-item" analytics-category="menu" analytics-label="{{item.name}}"></a>
+	        </li>
+            <li class="{{item.class}}" ng-repeat="item in menuItems" ng-repeat-end-watch="menuLoaded" ng-cloak>
+                <a href="{{item.link}}" class="{{item.icon}}" target="_blank" ng-if="item.blank" ng-bind-html="item.title" analytics-on analytics-event="main-item" analytics-category="menu" analytics-label="{{item.title}}"></a>
+                <a href="{{item.link}}" class="{{item.icon}}" ng-if="!item.blank" ng-bind-html="item.title" analytics-on analytics-event="main-item" analytics-category="menu" analytics-label="{{item.title}}"></a>
+                <ul class="submenu" ng-if="item.submenu">
+                    <li class="{{subitem.class}}" ng-repeat="subitem in item.submenu" ng-repeat-end-watch="menuLoaded">
+                        <a href="{{subitem.link}}" class="{{subitem.icon}}" target="_blank" ng-if="subitem.blank" ng-bind-html="subitem.title" analytics-on analytics-event="submenu-item" analytics-category="menu" analytics-label="{{subitem.title}}"></a>
+                        <a href="{{subitem.link}}" class="{{subitem.icon}}" ng-if="!subitem.blank" ng-bind-html="subitem.title" analytics-on analytics-event="submenu-item" analytics-category="menu" analytics-label="{{subitem.title}}"></a>
+                        <ul class="submenu" ng-if="subitem.submenu">
+                            <li class="{{subsubitem.class}}" ng-repeat="subsubitem in subitem.submenu" ng-repeat-end-watch="menuLoaded">
+                                <a href="{{subsubitem.link}}" class="{{subsubitem.icon}}" target="_blank" ng-if="subsubitem.blank" ng-bind-html="subsubitem.title" analytics-on analytics-event="subsubmenu-item" analytics-category="menu" analytics-label="{{subsubitem.title}}"></a>
+                                <a href="{{subsubitem.link}}" class="{{subsubitem.icon}}" ng-if="!subsubitem.blank" ng-bind-html="subsubitem.title" analytics-on analytics-event="subsubmenu-item" analytics-category="menu" analytics-label="{{subsubitem.title}}"></a>
+                            </li>
+                            <li class="item_sub" ng-if="item.subtitle1">
+                                <a href="{{item.link}}" class="{{item.icon}}" target="_blank" ng-if="item.blank" ng-bind-html="item.subtitle1" analytics-on analytics-event="subsubmenu-item" analytics-category="menu" analytics-label="{{item.subtitle1}}"></a>
+                                <a href="{{item.link}}" class="{{item.icon}}" ng-if="!item.blank" ng-bind-html="item.subtitle1" analytics-on analytics-event="subsubmenu-item" analytics-category="menu" analytics-label="{{item.subtitle1}}"></a>
+                            </li>
+                            <li class="submenu-extra-items" ng-if="item.subtitle2">
+                                <div class="item_sub2">
+                                    {{item.subtitle2}}
+                                </div>
+                                <ul>
+                                    <li ng-repeat="itemx in extraItems.news | tag:item.tagId | limitTo:3">
+                                        <div class="more-items-img-container">
+                                            <div class="more-items-img-mask"></div>
+                                            <img ng-src="{{itemx.media}}" class="more-items-img" imageonload ng-if="itemx.media">
+                                        </div>
+                                        <div class="wrapper ng-cloak" ng-cloak>
+                                            <time class="submenu-item-time more-items-time" ng-if="itemx.date" datetime="{{itemx.date}}"><span ng-bind-html="(itemx.date | amDateFormat:'D MMMM YYYY')"></span> <span class="date-time" ng-bind-html="(itemx.date | amDateFormat:'HH:mm')"></span></time>
+                                            <h2>{{itemx.title}}</h2>
+                                            <a ng-href="{{itemx.url}}" class="btn btn-empty" ng-if="itemx.button_text" ng-bind-html="itemx.button_text"></a>
+                                        </div>
+                                        <a ng-href="{{itemx.url}}" target="_blank" class="all-box-link" ng-if="itemx.blank == true"></a>
+                                        <a ng-href="{{itemx.url}}" class="all-box-link" ng-if="itemx.blank == false"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item_sub" ng-if="item.subtitle1">
+                        <a href="{{item.link}}" class="{{item.icon}}" target="_blank" ng-if="item.blank" ng-bind-html="item.subtitle1" analytics-on analytics-event="submenu-item" analytics-category="menu" analytics-label="{{item.subtitle1}}"></a>
+                        <a href="{{item.link}}" class="{{item.icon}}" ng-if="!item.blank" ng-bind-html="item.subtitle1" analytics-on analytics-event="submenu-item" analytics-category="menu" analytics-label="{{item.subtitle1}}"></a>
+                    </li>
+                    <li class="submenu-extra-items" ng-if="item.subtitle2">
+                        <div class="item_sub2">
+                            {{item.subtitle2}}
+                        </div>
+                        <ul>
+                            <li ng-repeat="itemx in extraItems.news | tag:item.tagId | limitTo:3">
+                                <div class="more-items-img-container">
+                                    <div class="more-items-img-mask"></div>
+                                    <img ng-src="{{itemx.media}}" class="more-items-img" imageonload ng-if="itemx.media">
+                                </div>
+                                <div class="wrapper ng-cloak" ng-cloak>
+                                    <time class="submenu-item-time more-items-time" ng-if="itemx.date" datetime="{{itemx.date}}"><span ng-bind-html="(itemx.date | amDateFormat:'D MMMM YYYY')"></span> <span class="date-time" ng-bind-html="(itemx.date | amDateFormat:'HH:mm')"></span></time>
+                                    <h2>{{itemx.title}}</h2>
+                                    <a ng-href="{{itemx.url}}" class="btn btn-empty" ng-if="itemx.button_text" ng-bind-html="itemx.button_text"></a>
+                                </div>
+                                <a ng-href="{{itemx.url}}" target="_blank" class="all-box-link" ng-if="itemx.blank == true"></a>
+                                <a ng-href="{{itemx.url}}" class="all-box-link" ng-if="itemx.blank == false"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div id="menu-zone2" class="menu-zone" ng-if="widgetsZones.menu[2]">
+            <div ng-repeat="item in widgetsZones.menu[2]"  ng-repeat-end-watch="menuWidgetsLoaded" class="menu-widgets-json" ng-cloak>
+                <div dynamic="item"></div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="md-modal md-effect-3 ng-cloak message-modal" id="modal-general" ng-cloak>
+        <div class="md-content">
+            <div class="md-header">
+                <h2 class="md-header-title"></h2>
+                <a class="md-close"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="md-body"></div>
+        </div>
+    </div>
+
+    <div class="md-overlay"></div>
+</header>
+    <div id="content" >
+    <div id="main" role="main" class="wrapper">
+        <div id="row-0" class="row-fluid row row-0 zones-1 full-width undefined">
+    <div class="column full-content zone-1">
+        <div id="team-title" class="widget team-color large-text p-0" >
+    <ul id="" class="more-items-list pages page-1 clearfix">
+            <li class="more-items-item AL "   >
+                                        <a href="#">
+                                            <img src="https://e1series.com/images/m4613_crop1002_255x191_proportional_173755427624F0.png" alt="Media ID-4613" class="more-items-img" loading="lazy" title="" />                                        </a>
+                                                    <div class="wrapper">
+                <h2><a href="#" class="more-items-title">Team AlUla <br>championed by LeBron James</a></h2>
+            </div>
+        </li>
+    </ul>
+    </div>
+<div id="team-wrapper" class="two-of-two widget p-0  layout-row" >
+<div id="" class="widget one-of-two boxed bottom-box left-box boxed-mobile-block gap-10 team-color owner" >
+    <ul id="" class="more-items-list pages page-1 clearfix">
+            <li class="more-items-item AL "   >
+                                        <a href="#">
+                                            <img src="https://e1series.com/images/m4615_crop11004_860x860_173755556089DA.png" alt="Media ID-4615" class="more-items-img" loading="lazy" title="" />                                        </a>
+                                                    <div class="wrapper">
+                <h2><a href="#" class="more-items-title">   <div class="layout-column">     <div>         <small>Team Owner</small>         <div class="owner">LeBron James</div>     </div>  </div> </a></h2>
+                <p class="more-items-text">Born out of a passion for sporting greatness and sustainable mobility, Team AlUla Championed by LeBron James competes in the UIM E1 World Championship presented by PIF - the first all-electric powerboat racing series governed by the UIM.</p>
+            </div>
+        </li>
+    </ul>
+    </div>
+<div id="" class="widget img-aside img-start-end text-left one-of-two gap-10 pilots" >
+    <ul id="" class="more-items-list pages page-1 clearfix">
+            <li class="more-items-item  "   >
+                                        <a href="#">
+                                            <img src="https://e1series.com/images/m4617_crop11004_860x860_1737555712661A.jpg" alt="Media ID-4617" class="more-items-img" loading="lazy" title="" />                                        </a>
+                                                    <div class="wrapper">
+                <h2><a href="#" class="more-items-title">   <span class="flag-icon  flag-icon-squared flag-icon-64 border-radius-lg "></span>Catie Munnings</a></h2>
+                <p class="more-items-text"> <div class="layout-column">     <div class="padding-bottom padding-top border-top border-bottom"> <small>Profession</small>         <div class="profession">Extreme E & WRX Driver</div>     </div>     <div class="layout-row">         <div class="padding-right padding-top border-right"><span class="secondary-text">Ladies European</span><p>Rally Champion at 18&nbsp;<br /><br /></p></div>         <div class="padding-left padding-top"><span class="secondary-text">Race winner</span><p>With Andretti United Extreme E Team</p></div>     </div> </div> </p>
+            </div>
+        </li>
+        <li class="more-items-item  "   >
+                                        <a href="#">
+                                            <img src="https://e1series.com/images/m4616_crop11004_860x860_17375556973FA4.jpg" alt="Media ID-4616" class="more-items-img" loading="lazy" title="" />                                        </a>
+                                                    <div class="wrapper">
+                <h2><a href="#" class="more-items-title">   <span class="flag-icon  flag-icon-squared flag-icon-38 border-radius-lg "></span>Rusty Wyatt</a></h2>
+                <p class="more-items-text"> <div class="layout-column">     <div class="padding-bottom padding-top border-top border-bottom"> <small>Profession</small>         <div class="profession">Powerboat Racer</div>     </div>     <div class="layout-row">         <div class="padding-right padding-top border-right"><span class="secondary-text">2nd</span><p>F1H2O World Championship 2024</p></div>         <div class="padding-left padding-top"><span class="secondary-text">1st</span><p>American Powerboat Championship 2022</p></div>     </div> </div> </p>
+            </div>
+        </li>
+    </ul>
+    </div>
+</div>
+        <div id="team-3d" class="widget fade-in-down" data-scroll data-scroll-offset="15%" >
+                    <h2 class="widget-title">Team RaceBird</h2>
+                <div id="widget-embed">
+                <iframe style="width: 100%;aspect-ratio: 16/9;height: auto;border:none;"src="https://www.e1series.com/assets/js/3d/racebird-AL.html"></iframe>            </div>
+        </div>
+                <div id="seo" class="hidden"    >
+        
+                <article id="seo-single article-view-single"
+                 class="article" >
+            <header>                                                                                                                    <h1 class="seo-title article-view-title">Team AlUla <br>championed by LeBron James</h1>
+                                                                                                                                                        <figure>
+                            <img src="https://e1series.com/images/m4632_crop11013_1000x1000_proportional_1737625551D980.jpg" alt="" class="seo-header-img article-view-header-img" />                        </figure>
+                                                        </header>
+                                </article>
+                </div><!-- end #news -->
+            </div>
+</div>
+    </div>
+</div>
+
+    <footer id="footer" role="contentinfo" >
+    <div id="footer-zone7" class="header-footer-zone" ng-if="widgetsZones.footer[7]">
+        <div ng-repeat="item in widgetsZones.footer[7]"  ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            <div dynamic="item"></div>
+        </div>
+    </div>
+    <div class="wrapper-group">
+        <div class="wrapper row1" ng-if="widgetsZones.footer[1] || widgetsZones.footer[2] || widgetsZones.footer[3]">
+            <div id="footer-zone1" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.footer[1]}">
+     	        
+                <div ng-repeat="item in widgetsZones.footer[1]" dynamic="item" ng-if="widgetsZones.footer[1]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+                </div>
+            </div>
+            <div id="footer-zone2" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.footer[2]}">
+                 <div ng-repeat="item in widgetsZones.footer[2]" dynamic="item" ng-if="widgetsZones.footer[2]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+                 </div>
+                
+            </div>
+            <div id="footer-zone3" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.footer[3]}">
+                <div ng-repeat="item in widgetsZones.footer[3]" dynamic="item" ng-if="widgetsZones.footer[3]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper row2" ng-if="widgetsZones.footer[4] || widgetsZones.footer[5] || widgetsZones.footer[6]">
+     	    <div id="footer-zone4" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.footer[4]}">
+                <div ng-repeat="item in widgetsZones.footer[4]" dynamic="item" ng-if="widgetsZones.footer[4]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+                </div>
+     	    </div>
+     	    <div id="footer-zone5" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.footer[5]}">
+                <div ng-repeat="item in widgetsZones.footer[5]" dynamic="item" ng-if="widgetsZones.footer[5]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+                </div>
+     	    </div>
+     	    <div id="footer-zone6" class="header-footer-zone" ng-class="{'empty-zone':!widgetsZones.footer[6]}">
+                <div ng-repeat="item in widgetsZones.footer[6]" dynamic="item" ng-if="widgetsZones.footer[6]" ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+                </div>
+     	    </div>
+        </div>
+    </div>
+    <div id="footer-zone8" class="header-footer-zone" ng-if="widgetsZones.footer[8]">
+        <div ng-repeat="item in widgetsZones.footer[8]"  ng-repeat-end-watch="menuWidgetsLoaded" class="header-widgets-json" ng-cloak>
+            <div dynamic="item"></div>
+        </div>
+    </div>
+</footer>
+
+    <button id="ihavecookiesBtn">&#x1F36A;</button>
+</div>
+<!-- end #container -->
+    <!-- Scripts at the end for a faster page loading: -->
+    <!-- jQuery loading from Google's CDN with fallback to local file. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://www.e1series.com/assets/js/libs/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="https://www.e1series.com/assets/js/plugins.js"></script>
+        <script src="https://www.e1series.com/assets/js/plugins-ng.js"></script>
+        <script src="https://www.e1series.com/assets/js/script.js"></script>
+    <script src="https://www.e1series.com/assets/js/script-ng.js"></script>
+    <!-- end scripts-->
+    <script type="text/javascript">
+        App.value("system_language", "en_US").value("siteDomain", "https://www.e1series.com/");
+                App.value("auth_api", 1);
+                App.value("facebookAppId", '230469274563575');
+                App.value("loginRedirectURL", '/teams-pilots/team-alula');
+                App.value("logoutRedirect", '/teams-pilots/team-alula');
+            </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLTXHQ36FQ"></script>
+    <script>
+        if ($.fn.ihavecookies.preference('analytics') === true) {
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-YLTXHQ36FQ', {
+                cookie_flags: 'max-age=7200;secure;samesite=none'
+            });
+        }
+    </script>
+        <script>
+        appendToFunction('fb_code', function() {
+                        (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=230469274563575";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        })
+        if ($.fn.ihavecookies.preference('marketing') === true) {
+            fb_code();
+        }
+    </script>
+    
+<!-- Installation Chrome's dialog box for IE6. -->
+<!--[if lt IE 7 ]>
+<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+</body>
+</html>
